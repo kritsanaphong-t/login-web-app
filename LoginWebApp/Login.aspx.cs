@@ -11,7 +11,15 @@ namespace LoginWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+            if (UsernameTextBox.Text == "admin" && PasswordTextBox.Text == "123")
+            {
+                Response.Redirect("Welcome.aspx");
+            }
         }
     }
 }
