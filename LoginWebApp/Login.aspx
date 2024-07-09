@@ -15,6 +15,9 @@
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <asp:Label ID="PasswordLabel" runat="server" Text="Password"></asp:Label><asp:TextBox ID="PasswordTextBox" runat="server"></asp:TextBox>
             </div>
+            <div style="display: flex; justify-content: flex-end; font-size: 12px; color: red;">
+                <asp:Label ID="IncorrectLogin" runat="server" Text="Username or password is incorrect." Visible="false"></asp:Label>
+            </div>
             <div style="display: flex; justify-content: flex-end;">
                 <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" />
             </div>

@@ -20,15 +20,23 @@ namespace LoginWebApp
         {
             string username = UsernameTextBox.Text;
             string password = PasswordTextBox.Text;
-            CheckLoginInformation(username, password);
+            if (CheckLoginInformation(username, password) == false)
+            {
+                IncorrectLogin.Visible = true;
+            }
         }
 
-        private void CheckLoginInformation(string username, string password)
+        private bool CheckLoginInformation(string username, string password)
         {
             if (username == "admin" && password == "123")
             {
                 WriteSession(username, password);
                 Response.Redirect("Welcome.aspx");
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
