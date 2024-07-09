@@ -11,7 +11,10 @@ namespace LoginWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["username"] == null || Session["password"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }

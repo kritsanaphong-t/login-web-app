@@ -20,7 +20,6 @@ namespace LoginWebApp
         {
             string username = UsernameTextBox.Text;
             string password = PasswordTextBox.Text;
-            WriteSession(username, password);
             CheckLoginInformation(username, password);
         }
 
@@ -28,12 +27,9 @@ namespace LoginWebApp
         {
             if (username == "admin" && password == "123")
             {
+                WriteSession(username, password);
                 Response.Redirect("Welcome.aspx");
             }
-            else
-            {
-                
-            }    
         }
 
         private void WriteSession(string username, string password)
